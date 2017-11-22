@@ -1,14 +1,29 @@
 {
-  "name": "jwt-utility",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@abskmj/jwt-utility",
+  "version": "0.0.2",
+  "description": "JWT Utility for Node.js",
+  "keywords": [
+    "utility",
+    "JWT",
+    "parser",
+    "generator",
+    "factory",
+    "security",
+    "authentication",
+    "token",
+    "JSON Web Token"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "abskmj@gmail.com",
   "license": "MIT",
   "dependencies": {
     "base64url": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abskmj/jwt-utility.git"
   }
 }

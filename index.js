@@ -49,7 +49,7 @@ let Factory = function (algorithm) {
         }));
 
         // add recommended claims
-        claims['iat'] = Math.floor(new Date() / 1000);
+        claims['iat'] = currentTime();
 
         if (issuer) {
             claims['iss'] = issuer;
