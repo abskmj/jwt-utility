@@ -1,6 +1,6 @@
 {
   "name": "@abskmj/jwt-utility",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JWT Utility for Node.js",
   "keywords": [
     "utility",

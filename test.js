@@ -1,21 +1,20 @@
 const JWTUtility = require('./index');
 
 let jwt = JWTUtility.getFactory('HS256')
-    .setIssuer('majhi')
+    .setIssuer('AuthServer')
     .setSubject('Login')
     .setExpiry(10)
     .setClaims({
         user: 'testUser',
         name: 'Test User'
     })
-    .sign('testKy');
+    .sign('secret key');
 
 console.log(jwt);
 
 let data = JWTUtility.getParser()
-    .validateIssuer('majhi')
-    .validateExpiry(10)
+    .validateIssuer('AuthServer')
     .validateSubject('Login')
-    .parse(jwt, 'testKy');
+    .parse(jwt, 'secret key');
 
 console.log(data);

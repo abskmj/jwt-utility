@@ -7,7 +7,7 @@ This utility can be used to generate and parse [JWTs (JSON Web Tokens)](https://
 - HS384
 - HS512
 
-# Utlity Methods
+# Utility Methods
 | Method | Arguments | Description |
 | :--- | :--- | :--- |
 | `getFactory` | String | Set algorithm to be used to generate the JWT and returns an instance of `Factory` |
@@ -46,9 +46,28 @@ let data = JWTUtility.getParser()
     .validateIssuer('AuthServer')
     .validateSubject('Login')
     .parse(jwt, 'secret key');
+
+/*
+data:
+{ 
+    headers: {
+        alg: 'HS256',
+        typ: 'JWT'
+    },
+    claims: {
+        user: 'testUser',
+        name: 'Test User',
+        iat: 1512555172,
+        iss: 'AuthServer',
+        sub: 'Login',
+        exp: 1512555182
+    }
+}
+
+*/    
 ```
 
-## Factory Instance Methods
+## Parser Instance Methods
 | Method | Arguments | Description |
 | :--- | :--- | :--- |
 | `validateIssuer` | String | Validate `iss` claim value. |
@@ -56,3 +75,6 @@ let data = JWTUtility.getParser()
 | `validateAudience` | String | Validate `aud` claim value. |
 | `validateExpiry` | Number | Validate `exp` claim value, value validated against current epoch time in seconds + seconds passed as argument. |
 | `parse` | String, String | Set JWT token and key used to verify the token |
+
+# Further Development
+Support for RS256, RS384, RS512 is not planned yet. Please get in touch with the [developer](mailto:abskmj@gmail.com), if you wish to request any new functionality or bug fix.
